@@ -148,20 +148,10 @@ contexts:
       push: string-content # Push to handle multi-line strings, ordinary match does not search beyond EOL.
 
   string-content:
-    - meta_scope: string.quoted.double\
-    - match: '\\\['
-      push: full-name
-    - match: '\\'
-      push: escaped-char
+    - meta_scope: string.quoted.double
+    - match: '\\\[.*?\]'
+      scope: constant.character.escape
+    - match: '\\.'
+      scope: constant.character.escape
     - match: '"'
-      pop: true
-
-  escaped-char:
-    - meta_scope: constant.character.escape
-    - match: '.'
-      pop: true
-
-  full-name:
-    - meta_scope: constant.character.escape
-    - match: '\]'
       pop: true
