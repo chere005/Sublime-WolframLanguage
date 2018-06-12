@@ -257,7 +257,8 @@ Module[
   StringMatchQ[IgnoreCase -> Automatic, foo -> bar]
 
   foo["bar",  baz_Lisght] :=
-
+(* A somewhat manual test, does find_under_expand (cmd/ctrl + d) select words separated by _ (like only baz in the line above), and does it include $ *)
+$Failed
 
 (* multiline (* also a comment *)
   comment 

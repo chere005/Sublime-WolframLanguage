@@ -1,0 +1,5 @@
+This is a plaintext file to ensure that words are not separated by _ for under_expand (cmd/ctrl + d) and that $ is still a split (provided the default word_separator has not been modified)
+
+$Failed
+
+Foo_bar
